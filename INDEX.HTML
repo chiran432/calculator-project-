@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="calculator bg-light p-4 rounded shadow">
+            <input type="text" class="form-control mb-3 display" id="display" disabled value="0">
+            <div class="buttons">
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('(')">(</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter(')')">)</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('sin(')">sin</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('cos(')">cos</button>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('tan(')">tan</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('log(')">log</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('ln(')">ln</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('sqrt(')">√</button>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('pi')">π</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('e')">e</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('^')">EXP</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-info w-100" onclick="appendCharacter('!')">x!</button>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="clearDisplay()">AC</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="deleteLast()">⌫</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('%')">%</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-warning w-100" onclick="appendCharacter('/')">÷</button>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('7')">7</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('8')">8</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('9')">9</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-warning w-100" onclick="appendCharacter('*')">×</button>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('4')">4</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('5')">5</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('6')">6</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-warning w-100" onclick="appendCharacter('-')">-</button>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('1')">1</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('2')">2</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('3')">3</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-warning w-100" onclick="appendCharacter('+')">+</button>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-6">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('0')">0</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-secondary w-100" onclick="appendCharacter('.')">.</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-success w-100" onclick="calculateResult()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
